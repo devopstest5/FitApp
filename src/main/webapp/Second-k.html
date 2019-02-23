@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+body{ background-color:skyblue;}
+.form{
+display: block;
+  position: relative;
+  text-align: center;
+  font-size: 32px;
+margin:5% auto
+}
+.container{
+ position: relative;
+  text-align: inherit;
+ font-size: 22px;
+margin:5%auto 50%auto;
+left:150px;
+
+}
+input[type=number]{
+width:70px;
+height:25px;
+padding:2px;
+color: black;
+font-size:16px;
+}
+.form2{
+ justify-content:center;
+}
+#fid{
+width:100px;
+height:30px;
+padding:15px;
+}
+#button {
+ background-color:white;
+  border-color:blue ;
+  color: Black;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+}
+#button:hover {
+border:none;
+  background-color: black;
+  color: white;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+}
+</style>
+</head>
+<body>
+<h1 class="form">FIGHT FOR FITNESS</h1>
+<div class="container">
+    <p><label ><b>Age(Years):   </b></label>
+      <input type="number" id="fage" name="fage">
+<br></p>
+      <p><label ><b>Height(in cms):   </b></label>
+      <input type="number" id="fhght"  name="fwght" >
+<br></p>
+    <p><label >  <b>Weight(in Kg):    </b></label>
+      <input type="number" id="fwght" name="fhght">
+    <br>  </p>
+<p><b>Gender:    </b> <input type="radio" name="gender" value="male" checked> Male   
+  <input type="radio" name="gender" value="female"> Female     
+  <input type="radio" name="gender" value="other"> Other 
+</p>
+
+<p>
+ <input id="button" type="submit" value="Submit" onclick="bmi()"></p>
+
+
+<p><b>BMI:   </b><input type="number" id="fid"> </p>
+<div >
+<textarea id="text"></textarea>
+</div>
+</div>
+<script type="text/javascript">
+function bmi(){
+var h,w,bmi,c,d;
+var message;
+h=document.getElementById("fhght").value;
+w=document.getElementById("fwght").value;
+c=h/100;
+d=Math.pow(c,2);
+bmi =w/d;
+if(bmi<=18.5){
+message="you are underweight";
+document.getElementById("text").value=message;
+}
+else if(bmi>18.5 && bmi<24.9)
+{
+message="you are healthy";
+document.getElementById("text").value=message;
+}
+else if(bmi>24.9)
+{
+message="you are overweight";
+document.getElementById("text").value=message;
+}
+document.getElementById("fid").value=bmi;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style>
+#button {
+    width: 6em;
+    border: 2px solid green;
+    background: #ffe;
+    border-radius: 5px;
+}
+a {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+body{ background-color:skyblue;}
+.form{
+display: block;
+  position: relative;
+  text-align: center;
+  font-size: 32px;
+margin:5% auto
+}
+.container{
+ position: relative;
+  text-align: center;
+ font-size: 22px;
+
+}
+input[type=text],input[type=password],input[type=number]{
+border:none;
+ border-bottom: 2px solid black;
+color: black;
+font-size:16px;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+img.logo {
+  width: 15%;
+  border-radius: 30%;
+}
+button:hover {
+  opacity: 0.8;
+style:bold;
+
+}
+
+</style>
+
+</head>
+<body>
+<h1 class="form">FIGHT FOR FITNESS</h1>
+ <div class="imgcontainer">
+ <img src="D:\fitness.png" alt="logo" class="logo">
+    </div>
+<div class="container">
+<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+      <p><b> Username : </b> 
+      <input id="usrname" type="text" name="fname2" >
+ <br></p>
+    <p> <b>Password:  </b> 
+      <input id="pswrd" type="password"  name="fpsw2" >
+     <br>  </p>
+
+<div id="button"><a href="Second-k.html">Log In</a></div>
+
+</form>
+</div>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname2"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  var y = document.forms["myForm"]["fpsw2"].value;
+  if (y == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+}
+</script>
+
+
+</body>
+</html>
